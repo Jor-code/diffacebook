@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
-	
-	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="theme-color" content="#1877f2">
+	<title>Iniciar sesión</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/master.css">
 </head>
 <body>
 
-	<div class="login-box">
+	<main class="login-wrapper">
 
-		<img class="avatar" src="img/descarga.png" alt="Logo de FAzt">
+		<div class="brand">
+			<img class="avatar" src="img/descarga.png" alt="Logo">
+			<h1 class="brand-name">FAzt</h1>
+			<p class="brand-tagline">Conéctate con tus amigos y el mundo que te rodea.</p>
+		</div>
 
-		<form name="contact" method="POST" data-netlify="true">
-  			<p>
+		<div class="login-card">
 
-    			<label><input type="text" name="name" placeholder="Correo electrónico o número de teléfono"/></label> 
+			<form name="contact" method="POST" data-netlify="true" class="login-form">
+				<input type="hidden" name="form-name" value="contact">
 
-  			</p>
-  			<p>
-    			<label><input type="password" name="text" placeholder="Contraseña"/></label>
-  			</p>
-  			
-  			
-  			<p>
+				<label class="field">
+					<input type="text" name="name" autocomplete="username" placeholder="Correo electrónico o número de teléfono" required>
+				</label>
 
-    			<button type="submit">Iniciar sesión</button>
-  			</p>
-		</form>
+				<label class="field">
+					<input type="password" name="text" autocomplete="current-password" placeholder="Contraseña" required>
+				</label>
 
-		<a href="#">¿Olvidaste tu contras?</a>
+				<button type="submit" class="btn btn-primary">Iniciar sesión</button>
 
-			<input type="submit" value="Crear cuenta nueva">
+				<a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
 
-		
+				<hr class="divider">
 
-	</div>
+				<a href="#" class="btn btn-secondary">Crear cuenta nueva</a>
+			</form>
 
-	
+		</div>
 
+		<footer class="login-footer">
+			<p><strong>Crear una página</strong> para una celebridad, una marca o una empresa.</p>
+		</footer>
 
-
-
+	</main>
 
 </body>
 </html>
